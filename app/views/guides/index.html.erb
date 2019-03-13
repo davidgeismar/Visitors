@@ -1,0 +1,8 @@
+<h1>Nos Guides</h1>
+<div class="row">
+  <% @guides.each do |guide| %>
+    <div class="col-6">
+      <%= render "guide", guide: guide %>
+    </div>
+  <% end %>
+</div>

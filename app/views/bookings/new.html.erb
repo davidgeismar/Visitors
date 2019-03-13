@@ -1,0 +1,10 @@
+NEW BOOKING
+<%= form_for @booking do |f| %>
+  <%= f.label "Quand ?" %>
+  <%= f.datetime_field :start_time %>
+  <%= f.label "duration in minutes" %>
+  <%= f.number_field :duration %>
+  <%= f.hidden_field :user_id, { value: params[:guide_id] } %>
+  <%= f.hidden_field :event_id, { value: params[:event_id] } %>
+  <%= f.submit "Valider" %>
+<% end %>

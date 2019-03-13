@@ -1,0 +1,10 @@
+<h1>Choose an event</h1>
+<div class="row">
+  <% @events.each do |event| %>
+    <div class="col-8">
+      <%= render "event", event: event %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "Next Step", new_booking_path(params[:guide_id]), class: "btn-primary disabled" %>

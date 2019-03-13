@@ -1,0 +1,16 @@
+
+<div class="card" style="width: 18rem;" >
+  <div class="card-body">
+    <h5 class="card-title"><%= booking.start_time %></h5>
+    <p class="card-text"><%= booking.duration %></p>
+    statut actuel <%= booking.status %>
+    <%= form_for booking do |f|%>
+      <%= f.hidden_field :status, value: :accepted %>
+      <%= f.submit "Accepter", class: "btn btn-success" %>
+    <% end %>
+    <%= form_for booking do |f|%>
+      <%= f.hidden_field :status, value: :declined %>
+      <%= f.submit "Décliner", class: "btn btn-danger" %>
+    <% end %>
+  </div>
+</div>
