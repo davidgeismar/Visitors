@@ -17,7 +17,7 @@ class GuidesController < ApplicationController
   private
 
   def guide_params
-    params.require(:guide).permit(:photo)
+    params.require(:guide).permit(:photo, :last_name, :first_name, :description)
   end
   def set_guide
     @guide = Guide.find(params[:id])

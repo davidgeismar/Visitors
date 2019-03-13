@@ -9,6 +9,8 @@ class CreatBookings < ActiveRecord::Migration[5.2]
       t.integer    :duration
       t.text       :meeting_point
       t.boolean    :accepted, default: false
+
+      t.timestamps
     end
   end
 end

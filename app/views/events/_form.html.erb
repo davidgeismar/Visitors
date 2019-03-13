@@ -1,0 +1,20 @@
+<%= form_for event, html: { multipart: true } do |f| %>
+  <p>
+    <%= f.label "name" %>
+    <%= f.text_field :name %>
+    <%= f.label "description" %>
+    <%= f.text_area :description %>
+    <%= f.label "start date" %>
+    <%= f.date_field :start_date %>
+    <%= f.label "end date" %>
+    <%= f.date_field :end_date %>
+    <%= f.label "address" %>
+    <%= f.text_field :address %>
+    <%= f.label "venue" %>
+    <%= f.text_field :venue %>
+    <label>My Photo</label>
+    <%= f.file_field :photo %>
+    <%= f.hidden_field :photo_cache %>
+    <%= f.submit "valider" %>
+  </p>
+<% end %>

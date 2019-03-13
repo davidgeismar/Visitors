@@ -1,10 +1,57 @@
 
+<div class="container mt-5">
 
-<%= form_for @guide, html: { multipart: true } do |f| %>
-  <p>
-    <label>My Photo</label>
-    <%= f.file_field :photo %>
-    <%= f.hidden_field :photo_cache %>
-    <%= f.submit "valider" %>
-  </p>
-<% end %>
+  <%= form_for @guide, html: { multipart: true } do |f| %>
+	  <div class="row">
+      <!-- left column -->
+        <div class="col-md-3">
+          <div class="text-center">
+            <% if @guide.photo.url %>
+              <%= cl_image_tag  @guide.photo.url, height: "100px" %>
+            <% else %>
+              <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+            <% end %>
+            <h6>Upload a different photo...</h6>
+
+            <%= f.file_field :photo, class: "form-control" %>
+            <%= f.hidden_field :photo_cache %>
+
+          </div>
+        </div>
+
+        <!-- edit form column -->
+        <div class="col-md-9 personal-info">
+          <h3>Personal info</h3>
+
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label class="col-lg-3 control-label">First name:</label>
+              <div class="col-lg-8">
+                <%= f.text_field :first_name, class: "form-control" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-3 control-label">Last name:</label>
+              <div class="col-lg-8">
+                <%= f.text_field :last_name, class: "form-control" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-lg-3 control-label">Description:</label>
+              <div class="col-lg-8">
+                  <%= f.text_area :description, class: "form-control" %>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label"></label>
+              <div class="col-md-8">
+                  <%= f.submit "valider", class: "btn btn-primary" %>
+                <span></span>
+                <input type="reset" class="btn btn-default" value="Cancel">
+              </div>
+            </div>
+          </form>
+        </div>
+    </div>
+  <% end %>
+</div>
