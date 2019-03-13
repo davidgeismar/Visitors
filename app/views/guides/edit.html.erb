@@ -1,3 +1,10 @@
-<%= form_for @guide do |f| %>
 
+
+<%= form_for @guide, html: { multipart: true } do |f| %>
+  <p>
+    <label>My Photo</label>
+    <%= f.file_field :photo %>
+    <%= f.hidden_field :photo_cache %>
+    <%= f.submit "valider" %>
+  </p>
 <% end %>

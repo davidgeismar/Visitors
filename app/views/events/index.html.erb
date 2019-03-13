@@ -1,8 +1,1 @@
-<h1>Choose an event</h1>
-<div class="row">
-  <% @events.each do |event| %>
-    <div class="col-8">
-      <%= render "event", event: event %>
-    </div>
-  <% end %>
-</div>
+<%= render "events", events: @events %>

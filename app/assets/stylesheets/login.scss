@@ -1,0 +1,50 @@
+.banner-login {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%),  url("klimt.jpg");
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_btn {
+color: black;
+background-color: #FFC312;
+width: 100px;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.card-login{
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 400px;
+  background-color: rgba(0,0,0,0.5) !important;
+}
+
+.social_icon span{
+  font-size: 60px;
+  margin-left: 10px;
+  color: blue;
+}
+//
+// .input-group-prepend span{
+//   width: 50px;
+//   background-color: #FFC312;
+//   color: black;
+//   border:0 !important;
+// }
+
+
+.social_icon span:hover{
+  color: white;
+  cursor: pointer;
+}

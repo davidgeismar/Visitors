@@ -1,5 +1,13 @@
-<div class="card">
-  <img src="https://via.placeholder.com/150" alt="">
+<div class="card m-4 align-items-stretch">
+  <% if guide.photo.url %>
+    <div class="guide-image" style="background-image: url('<%= guide.photo.url%>');" >
+    </div>
+  <% else %>
+  <div class="default-avatar d-flex flex-row justify-content-center" style="height: 200px; width: 100%;">
+    <%= image_tag "default_avatar" %>
+
+  </div>
+  <% end %>
   <div class="card-body">
     <h5 class="card-title"><%= guide.full_name %></h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
