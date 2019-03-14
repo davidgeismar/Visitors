@@ -18,5 +18,8 @@ event = Event.create(name: "Jackson Pollock", description: "paintings", start_da
 Event.create(name: "Collection Courtauld", description: "la collection courtauld", start_date: "12/12/2018", end_date: "12/09/2019")
 Event.create(name: "Bonnard", description: "Bonnard impressionniste", start_date: "12/12/2018", end_date: "12/09/2019")
 Event.create(name: "Byron", description: "la collection courtauld", start_date: "12/12/2018", end_date: "12/09/2019")
-
+Tag.create(name: "Impressionisme")
+Tag.create(name: "Peinture")
+Tag.create(name: "Surrealisme")
+Tag.create(name: "Francis Bacon")
 booking = Booking.create(start_time: Time.now, end_time: Time.now + 3, duration: 3, meeting_point: "whitchapel gallery", event: event, guide: guide, bookable: visitor)

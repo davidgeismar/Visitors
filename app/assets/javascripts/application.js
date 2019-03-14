@@ -12,4 +12,6 @@
 //
 //= require rails-ujs
 //= require activestorage
+//= require chosen
 //= require_tree .
+console.log("c'est moi")

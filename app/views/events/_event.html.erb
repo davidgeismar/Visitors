@@ -7,6 +7,7 @@
       <h5><%= event.name %></h5>
       <p>from <%= event.start_date.strftime("%m/%d/%Y") %> to <%= event.end_date.strftime("%m/%d/%Y") %></p>
       <p class="card-text"><%= event.description %></p>
+       <p><small>Tags: <%= raw event.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %></small</p>
       <%= link_to "Book me", new_booking_path(guide_id: params[:guide_id], event_id: event.id), class: "btn btn-primary" %>
     </div>
   </div>
@@ -20,6 +21,8 @@
         <h5><%= event.name %></h5>
         <p>from <%= event.start_date.strftime("%m/%d/%Y") %> to <%= event.end_date.strftime("%m/%d/%Y") %></p>
         <p class="card-text"><%= event.description %></p>
+        <p><small>Tags: <%= raw event.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %></small></p>
+
         <a href="#" class="btn btn-primary">Book event</a>
         <%= link_to "Choose a guide", guides_path(event_id: event.id), class: "btn btn-success" %>
       </div>

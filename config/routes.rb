@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get "/pick_event", to: "events#pick_event", as: :pick_event
   resources :guides
   resources :bookings
+  # add this line to link tags to posts with the respective tag
+  get 'tags/:tag', to: 'events#index', as: :tag
 end
