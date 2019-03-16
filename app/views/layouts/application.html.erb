@@ -15,7 +15,10 @@
       <p class="alert"><%# alert %></p> -->
       <%= yield %>
 
+      <div id="content-from-webpacker"></div>
+
     <%= javascript_pack_tag 'application' %>
+      <%= stylesheet_pack_tag 'application' %>
     <%= javascript_include_tag 'application' %>
   </body>
 </html>
