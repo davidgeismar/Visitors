@@ -18,3 +18,8 @@
 console.log('Hello World from Webpacker')
 import 'jquery'
 import 'bootstrap/dist/js/bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('#content-from-webpacker').innerHTML = '<p class="h1">h1. Bootstrap heading</p><h1 class="display-1">Display 1</h1>'
+})
